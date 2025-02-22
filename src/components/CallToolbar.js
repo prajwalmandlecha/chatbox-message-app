@@ -6,7 +6,7 @@ import { toggleSpeaker } from "../services/inCallManagerService";
 const CallToolbar = ({ switchCamera, toggleCamera, toggleAudio, hangUp }) => {
   const [isCameraOn, setIsCameraOn] = useState(true);
   const [isMicOn, setIsMicOn] = useState(true);
-  const [isSpeakerOn, setIsSpeakerOn] = useState(false);
+  const [isSpeakerOn, setIsSpeakerOn] = useState(true);
 
   const onReverseCamera = async () => {
     await switchCamera();
