@@ -24,7 +24,10 @@ const IncomingCallScreen = ({ navigation, route }) => {
       ) {
         stopAudio();
 
-        navigation.popToTop();
+        navigation.reset({
+          index: 0,
+          routes: [{ name: "Home" }],
+        });
       }
     });
 
@@ -45,7 +48,10 @@ const IncomingCallScreen = ({ navigation, route }) => {
     console.log("Decline Call");
     const callDoc = doc(collection(FIREBASE_DB, "calls"), uuid);
     await updateDoc(callDoc, { status: CALL_STATUS.REJECTED });
-    navigation.popToTop();
+    navigation.reset({
+      index: 0,
+      routes: [{ name: "Home" }],
+    });
   };
   return (
     <View style={styles.container}>

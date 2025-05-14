@@ -19,8 +19,6 @@ const UsersList = ({ navigation }) => {
     // console.log("onCallPress called", user);
 
     const callId = uuidv4();
-    // const uuid = "292992";
-    // console.log("uuid generated", uuidv4());
 
     navigation.navigate("CallScreenMain", {
       user,

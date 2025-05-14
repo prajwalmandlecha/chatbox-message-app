@@ -218,7 +218,10 @@ export const createCall = async (uuid, pc, currentUser, user, navigation) => {
     ) {
       await updateDoc(callDoc, { status: CALL_STATUS.MISSED });
       alert("Call missed.");
-      navigation.popToTop();
+      navigation.reset({
+        index: 0,
+        routes: [{ name: "Home" }],
+      });
     }
   }, 30000); // Increased timeout duration to 30 seconds
 
@@ -250,18 +253,27 @@ export const createCall = async (uuid, pc, currentUser, user, navigation) => {
     } else if (data?.status === CALL_STATUS.REJECTED) {
       clearTimeout(callTimeout);
       alert("Call rejected.");
-      navigation.popToTop();
+      navigation.reset({
+        index: 0,
+        routes: [{ name: "Home" }],
+      });
     } else if (data?.status === CALL_STATUS.MISSED) {
       clearTimeout(callTimeout);
       alert("Call missed.");
-      navigation.popToTop();
+      navigation.reset({
+        index: 0,
+        routes: [{ name: "Home" }],
+      });
     } else if (
       data.status === CALL_STATUS.ACCEPTED ||
       data.status === CALL_STATUS.ANSWER
     ) {
     } else if (data.status === CALL_STATUS.FINISHED) {
       alert("Call finished.");
-      navigation.popToTop();
+      navigation.reset({
+        index: 0,
+        routes: [{ name: "Home" }],
+      });
     }
   });
 
@@ -302,4 +314,8 @@ export const hangUp = async (
   setLocalStream(null);
   setRemoteStream(null);
   // navigation.popToTop();
+  navigation.reset({
+    index: 0,
+    routes: [{ name: "Home" }],
+  });
 };

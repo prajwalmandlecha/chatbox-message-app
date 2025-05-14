@@ -33,12 +33,12 @@ const AppNavigator = () => (
     <AppStack.Screen name="Home" component={Home} />
     <AppStack.Screen name="Conversation" component={ChatScreen} />
     <AppStack.Group screenOptions={{ headerShown: false }}>
-      <AppStack.Screen name="CallScreen" component={CallScreen} />
+      {/* <AppStack.Screen name="CallScreen" component={CallScreen} /> */}
       <AppStack.Screen name="IncomingCall" component={IncomingCallScreen} />
-      <AppStack.Screen
+      {/* <AppStack.Screen
         name="OutgoingCallScreen"
         component={OutgoingCallScreen}
-      />
+      /> */}
       <AppStack.Screen name="CallScreenMain" component={CallScreenMain} />
     </AppStack.Group>
   </AppStack.Navigator>

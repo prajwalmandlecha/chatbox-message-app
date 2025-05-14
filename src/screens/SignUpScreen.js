@@ -20,7 +20,7 @@ const SignUp = ({ navigation }) => {
   const [name, setName] = useState("");
 
   const signUp = async () => {
-    SignUpUtil({ name, email, password, setLoading });
+    await SignUpUtil({ name, email, password, setLoading });
   };
 
   return (

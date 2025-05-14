@@ -11,7 +11,10 @@ const OutgoingCallScreen = ({ navigation, route }) => {
     console.log("Decline Call");
     const callDoc = doc(collection(FIREBASE_DB, "calls"), uuid);
     await updateDoc(callDoc, { status: "rejected" });
-    navigation.popToTop();
+    navigation.reset({
+        index: 0,
+        routes: [{ name: "Home" }],
+      });
   };
 
   return (
