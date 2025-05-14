@@ -1,0 +1,83 @@
+{
+  "expo": {
+    "name": "Chatbox",
+    "slug": "message-app",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/Chatbox.png",
+    "userInterfaceStyle": "light",
+    "newArchEnabled": true,
+    "splash": {
+      "image": "./assets/splash-icon.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#ffffff"
+    },
+    "doctor": {
+      "reactNativeDirectoryCheck": {
+        "exclude": [
+          "react-native-webrtc",
+          "@babel/plugin-transform-runtime",
+          "@babel/runtime",
+          "@zamplyy/react-native-nice-avatar",
+          "chroma-js",
+          "firebase",
+          "firebase-admin",
+          "react-nice-avatar"
+        ],
+        "listUnknownPackages": false
+      }
+    },
+    "ios": {
+      "supportsTablet": true
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/Chatbox.png",
+        "backgroundColor": "#ffffff"
+      },
+      "package": "com.messageapp.messageapp",
+      "permissions": [
+        "CAMERA",
+        "RECORD_AUDIO",
+        "READ_EXTERNAL_STORAGE",
+        "WRITE_EXTERNAL_STORAGE",
+        "NOTIFICATIONS",
+        "READ_PHONE_STATE",
+        "CALL_PHONE",
+        "READ_CALL_LOG",
+        "WRITE_CALL_LOG",
+        "ADD_VOICEMAIL",
+        "USE_SIP",
+        "RECORD_AUDIO",
+        "FOREGROUND_SERVICE"
+      ]
+    },
+    "web": {
+      "favicon": "./assets/favicon.png"
+    },
+    "extra": {
+      "eas": {
+        "projectId": "c08e413b-e10e-4120-8fda-b62998988100"
+      },
+      "firebaseConfig": {
+        "apiKey": "AIzaSyCoVEgfAVGOKbBvuZ5FwDdtgqY",
+        "authDomain": "messaging-app2-126a2.firebaseapp.com",
+        "projectId": "messaging-app2-126a2",
+        "storageBucket": "messaging-app2-126a2.firebasestorage.app",
+        "messagingSenderId": "494184123645",
+        "appId": "1:494184123645:web:232fe7ee3d2a48cd598294",
+        "measurementId": "G-GBDJKNYRJ5"
+      }
+    },
+    "plugins": [
+      "@config-plugins/react-native-webrtc",
+      [
+        "expo-location",
+        {
+          "locationAlwaysAndWhenInUsePermission": "Allow $(PRODUCT_NAME) to use your location."
+        }
+      ]
+    ],
+    "owner": "prajwal32"
+  }
+}
