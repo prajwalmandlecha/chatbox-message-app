@@ -11,9 +11,6 @@ Chatbox is a real-time messaging and video calling app built with React Native w
 - User avatars and presence
 - Modern, mobile-friendly UI
 
-## Screenshots
-
-![Chatbox Screenshot](assets/Chatbox.png)
 
 ## Getting Started
 
