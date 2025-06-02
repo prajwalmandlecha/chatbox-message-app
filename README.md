@@ -106,15 +106,6 @@ Once dependencies are installed and Firebase is configured:
 -   **`npm run android`** or **`yarn android`**:
     -   Command: `expo run:android`
     -   Description: Builds and runs the app on a connected Android device or emulator.
--   **`npm run ios`** or **`yarn ios`**:
-    -   Command: `expo run:ios`
-    -   Description: Builds and runs the app on an iOS simulator or connected device (requires macOS and Xcode).
--   **`npm run web`** or **`yarn web`**:
-    -   Command: `expo start --web`
-    -   Description: Bundles the app and runs it in a web browser (if web support is fully configured).
--   **`npm run postinstall`** or **`yarn postinstall`**:
-    -   Command: `patch-package`
-    -   Description: Applies patches to `node_modules` after installation. This is often used for specific fixes to dependencies.
 
 ## Project Structure
 
